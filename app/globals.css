@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-red: #E30613;
+  --dark-red: #62000B;
+  --deep-red: #3D0007;
+  --black: #111111;
+  --light-gray: #F7F7F7;
+  --border: #E5E5E5;
+}
+
+/* Strict No Shadow Rule (Reference spec #4) */
+*,
+*::before,
+*::after {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: #111111;
+  background-color: #FFFFFF;
+}
+
+body {
+  overflow-x: hidden;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus ring accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #E30613;
+  outline-offset: 2px;
+}
